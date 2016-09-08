@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Sign Up View Controller-->
+        <!--Hipstagram-->
         <scene sceneID="v92-1i-rd9">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="VJM-kq-Mc3" customClass="SignUpViewController" customModule="Hipstagram" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,38 +32,24 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hhx-w4-kJk">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hhx-w4-kJk">
                                 <rect key="frame" x="237" y="398" width="126" height="30"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="I am Hipsta">
-                                            <attributes>
-                                                <color key="NSBackgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="15" name="GillSans-Bold"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="15"/>
+                                <state key="normal" title="I am Hipsta">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eX2-RM-2oD">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eX2-RM-2oD">
                                 <rect key="frame" x="266" y="360" width="68" height="30"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Sign Up">
-                                            <attributes>
-                                                <color key="NSBackgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="15" name="GillSans-Bold"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="15"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="QJ9-y1-nMz"/>
+                    <navigationItem key="navigationItem" title="Hipstagram" id="QJ9-y1-nMz"/>
                     <connections>
                         <segue destination="kOw-gH-GPc" kind="presentation" id="R77-Q8-cBp"/>
                     </connections>
@@ -78,7 +64,7 @@
                 <viewControllerPlaceholder storyboardName="Main" id="kOw-gH-GPc" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LYZ-Zk-dgN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="737.5" y="718"/>
+            <point key="canvasLocation" x="1042" y="1022"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Eok-ZI-C0J">
@@ -88,6 +74,12 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xb1-Go-qmF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.92931595280000001" green="0.35516277899999998" blue="0.48749217639999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="textShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="5" vertical="0.0"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -96,7 +88,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eZQ-4f-3bM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="230" y="248"/>
+            <point key="canvasLocation" x="322" y="248"/>
         </scene>
         <!--Sign In View Controller-->
         <scene sceneID="Fcm-nK-tch">
@@ -120,43 +112,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RKa-5T-i9B">
-                                <rect key="frame" x="173" y="205" width="255" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6qw-RV-NpW">
-                                <rect key="frame" x="237" y="398" width="126" height="30"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="I am Hipsta">
-                                            <attributes>
-                                                <color key="NSBackgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="15" name="GillSans-Bold"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M8N-CV-jEe">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8N-CV-jEe">
                                 <rect key="frame" x="266" y="360" width="68" height="30"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Sign Up">
-                                            <attributes>
-                                                <color key="NSBackgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="15" name="GillSans-Bold"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="15"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="w2c-Fe-KO6"/>
                     <connections>
                         <segue destination="kOw-gH-GPc" kind="presentation" id="dQ2-f0-mqe"/>
                     </connections>
@@ -167,6 +132,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dQ2-f0-mqe"/>
+        <segue reference="R77-Q8-cBp"/>
     </inferredMetricsTieBreakers>
 </document>
