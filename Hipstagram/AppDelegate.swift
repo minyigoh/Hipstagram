@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // +/- splash screen load time
+        NSThread .sleepForTimeInterval(2)
+        
+        // set background image
+        //[Info.plist->Supported interface orientations edited array[1,2]string as Portrait instead of Landscape
+        self.window!.layer.contents = (UIImage(named: "hipsta.png")!.CGImage as! AnyObject)
+        
+        //Connect to Firebase by initializing code below
+        FIRApp.configure()
+        
+        //Check for existing key in userdefaults,if yes,set rooVC as tabBarController named HipstaTabBarController
+        if let _ =  NSUserDefaults.standardUserDefaults().objectForKey("userUID") as? String{
+            
+            let storyBoard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+            
+            let tabBarController = storyBoard.instantiateViewControllerWithIdentifier ("HipstaTabBarController")
+            
+            self.window?.rootViewController = tabBarController
+        }
+
         return true
     }
 

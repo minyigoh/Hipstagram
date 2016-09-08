@@ -8,7 +8,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="yI8-cw-w6c">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="G7l-MD-gK1" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="HipstaTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="G7l-MD-gK1" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="rJF-qd-Wah">
                         <autoresizingMask key="autoresizingMask"/>

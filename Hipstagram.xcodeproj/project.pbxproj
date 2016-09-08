@@ -113,10 +113,10 @@
 		48E4406D1D8116CB00874D92 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
-				AE04D0221D8132F4002B151D /* GoogleService-Info.plist */,
-				48E440551D8111A000874D92 /* Info.plist */,
 				48E440491D8111A000874D92 /* AppDelegate.swift */,
 				48E440501D8111A000874D92 /* Assets.xcassets */,
+				AE04D0221D8132F4002B151D /* GoogleService-Info.plist */,
+				48E440551D8111A000874D92 /* Info.plist */,
 				48E440521D8111A000874D92 /* LaunchScreen.storyboard */,
 			);
 			name = "Supporting files";

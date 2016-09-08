@@ -5,53 +5,88 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Hipstagram-->
+        <!--SignUpViewController-->
         <scene sceneID="v92-1i-rd9">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="VJM-kq-Mc3" customClass="SignUpViewController" customModule="Hipstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="SignUpViewController" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="flipHorizontal" id="VJM-kq-Mc3" customClass="SignUpViewController" customModule="Hipstagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VyM-ar-AzI"/>
                         <viewControllerLayoutGuide type="bottom" id="Uch-GZ-fwx"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Xvs-jD-6BN">
+                    <view key="view" contentMode="scaleAspectFit" id="Xvs-jD-6BN">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pgw-PK-TZn">
-                                <rect key="frame" x="173" y="256" width="255" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DIb-4O-9yk">
-                                <rect key="frame" x="173" y="307" width="255" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done" secureTextEntry="YES"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aaL-TH-q5X">
-                                <rect key="frame" x="173" y="205" width="255" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hhx-w4-kJk">
-                                <rect key="frame" x="237" y="398" width="126" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="5Tv-aK-7jj">
+                                <rect key="frame" x="175" y="344" width="250" height="120"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="aaL-TH-q5X">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="30"/>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pgw-PK-TZn">
+                                        <rect key="frame" x="0.0" y="45" width="250" height="30"/>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="DIb-4O-9yk">
+                                        <rect key="frame" x="0.0" y="90" width="250" height="30"/>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done" secureTextEntry="YES"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="DZX-L9-8XB"/>
+                                    <constraint firstAttribute="height" constant="120" id="JnO-i9-I3c"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hhx-w4-kJk">
+                                <rect key="frame" x="237" y="520" width="126" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="126" id="J8y-qy-CBC"/>
+                                    <constraint firstAttribute="height" constant="30" id="Qxi-H5-p0L"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="15"/>
                                 <state key="normal" title="I am Hipsta">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Xgz-91-LO8" kind="show" id="iqV-nl-Blj"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eX2-RM-2oD">
-                                <rect key="frame" x="266" y="360" width="68" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eX2-RM-2oD">
+                                <rect key="frame" x="266" y="482" width="68" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="68" id="LrB-BL-1pN"/>
+                                    <constraint firstAttribute="height" constant="30" id="S4O-uC-rgr"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="15"/>
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="signUpButtonPressed:" destination="VJM-kq-Mc3" eventType="touchUpInside" id="h9O-jT-MeM"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="5Tv-aK-7jj" firstAttribute="centerX" secondItem="Xvs-jD-6BN" secondAttribute="centerX" id="ERo-pc-I77"/>
+                            <constraint firstItem="5Tv-aK-7jj" firstAttribute="top" secondItem="VyM-ar-AzI" secondAttribute="bottom" constant="280" id="KuB-yb-to1"/>
+                            <constraint firstItem="eX2-RM-2oD" firstAttribute="top" secondItem="5Tv-aK-7jj" secondAttribute="bottom" constant="18" id="Plw-oi-zXc"/>
+                            <constraint firstItem="Hhx-w4-kJk" firstAttribute="top" secondItem="eX2-RM-2oD" secondAttribute="bottom" constant="8" id="Vvp-nA-Kpy"/>
+                            <constraint firstItem="Hhx-w4-kJk" firstAttribute="centerX" secondItem="Xvs-jD-6BN" secondAttribute="centerX" id="bUr-Ff-hQY"/>
+                            <constraint firstItem="eX2-RM-2oD" firstAttribute="centerX" secondItem="Xvs-jD-6BN" secondAttribute="centerX" id="phy-f8-Mdp"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Hipstagram" id="QJ9-y1-nMz"/>
+                    <navigationItem key="navigationItem" title="Hipstagram" id="QJ9-y1-nMz">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="JEX-he-QA0"/>
+                    </navigationItem>
                     <connections>
-                        <segue destination="kOw-gH-GPc" kind="presentation" id="R77-Q8-cBp"/>
+                        <outlet property="emailTF" destination="pgw-PK-TZn" id="ybs-0Z-7Ki"/>
+                        <outlet property="passwordTF" destination="DIb-4O-9yk" id="5vO-pO-Fx3"/>
+                        <outlet property="usernameTF" destination="aaL-TH-q5X" id="p2x-EE-zBb"/>
+                        <segue destination="kOw-gH-GPc" kind="presentation" identifier="mainSegue" modalTransitionStyle="flipHorizontal" id="R77-Q8-cBp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GRP-sP-5wk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -64,21 +99,21 @@
                 <viewControllerPlaceholder storyboardName="Main" id="kOw-gH-GPc" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LYZ-Zk-dgN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042" y="1022"/>
+            <point key="canvasLocation" x="1069" y="1028"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--SignUpNavigationViewController-->
         <scene sceneID="Eok-ZI-C0J">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4DC-x6-cHY" sceneMemberID="viewController">
+                <navigationController title="SignUpNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" id="4DC-x6-cHY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xb1-Go-qmF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.92931595280000001" green="0.35516277899999998" blue="0.48749217639999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <color key="textShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <offsetWrapper key="textShadowOffset" horizontal="5" vertical="0.0"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -90,48 +125,74 @@
             </objects>
             <point key="canvasLocation" x="322" y="248"/>
         </scene>
-        <!--Sign In View Controller-->
-        <scene sceneID="Fcm-nK-tch">
+        <!--SignInViewController-->
+        <scene sceneID="9Es-Mw-7Bq">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="6c3-Pu-GOl" customClass="SignInViewController" customModule="Hipstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="SignInViewController" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="partialCurl" id="Xgz-91-LO8" customClass="SignInViewController" customModule="Hipstagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Lkz-h9-maM"/>
-                        <viewControllerLayoutGuide type="bottom" id="xqm-YU-hcE"/>
+                        <viewControllerLayoutGuide type="top" id="d9f-ei-UzZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="M5k-iO-9mQ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="6pK-BE-vYC">
+                    <view key="view" contentMode="scaleAspectFit" id="2uf-gM-Nor">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="78B-Qc-gZk">
-                                <rect key="frame" x="173" y="256" width="255" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e4I-Qd-bgB">
-                                <rect key="frame" x="173" y="307" width="255" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done" secureTextEntry="YES"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8N-CV-jEe">
-                                <rect key="frame" x="266" y="360" width="68" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="j4W-Da-IdW">
+                                <rect key="frame" x="175" y="344" width="250" height="75"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="lRL-rl-xb9">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="30"/>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rXO-ct-SGr">
+                                        <rect key="frame" x="0.0" y="45" width="250" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="5l2-ot-Ysu"/>
+                                            <constraint firstAttribute="height" constant="30" id="aO5-dz-M6Y"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done" secureTextEntry="YES"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="cRS-FJ-Wip"/>
+                                    <constraint firstAttribute="width" constant="250" id="fVl-EN-IBo"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USx-ut-jyL">
+                                <rect key="frame" x="273.5" y="437" width="52" height="30"/>
                                 <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="15"/>
                                 <state key="normal" title="Sign In">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="signInButtonPressed:" destination="Xgz-91-LO8" eventType="touchUpInside" id="R0O-iJ-DBK"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="j4W-Da-IdW" firstAttribute="top" secondItem="d9f-ei-UzZ" secondAttribute="bottom" constant="280" id="2UG-YR-yeh"/>
+                            <constraint firstItem="USx-ut-jyL" firstAttribute="top" secondItem="j4W-Da-IdW" secondAttribute="bottom" constant="18" id="7m3-fj-3un"/>
+                            <constraint firstItem="USx-ut-jyL" firstAttribute="centerX" secondItem="2uf-gM-Nor" secondAttribute="centerX" id="JjW-Kr-8nB"/>
+                            <constraint firstItem="j4W-Da-IdW" firstAttribute="centerX" secondItem="2uf-gM-Nor" secondAttribute="centerX" id="KvV-3C-5Io"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Hipstagram" id="PyG-HC-9yL">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="p7v-RL-5p6"/>
+                    </navigationItem>
                     <connections>
-                        <segue destination="kOw-gH-GPc" kind="presentation" id="dQ2-f0-mqe"/>
+                        <outlet property="emailTF" destination="lRL-rl-xb9" id="x47-4b-SDu"/>
+                        <outlet property="passwordTF" destination="rXO-ct-SGr" id="Vg4-bl-wTP"/>
+                        <segue destination="kOw-gH-GPc" kind="presentation" identifier="mainSegue" modalTransitionStyle="crossDissolve" id="yTo-7d-Csy"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="T4j-bB-unY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6uv-L7-sTQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="322" y="1022"/>
+            <point key="canvasLocation" x="322" y="1028"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="R77-Q8-cBp"/>
+        <segue reference="yTo-7d-Csy"/>
     </inferredMetricsTieBreakers>
 </document>
