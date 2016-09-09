@@ -20,9 +20,13 @@
 		48E440681D8113F500874D92 /* ImageFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E440671D8113F500874D92 /* ImageFeedViewController.swift */; };
 		48E4406A1D81140B00874D92 /* UploadImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E440691D81140B00874D92 /* UploadImageViewController.swift */; };
 		48E4406C1D8114F700874D92 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E4406B1D8114F700874D92 /* ProfileViewController.swift */; };
+		AE04D0231D8132F4002B151D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE04D0221D8132F4002B151D /* GoogleService-Info.plist */; };
+		AE726C521D824B94009AEDC4 /* UncoveredContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE726C511D824B94009AEDC4 /* UncoveredContentViewController.swift */; };
+		B8131AA7DF803A8006C1BB20 /* Pods_Hipstagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C1D1E7CD744D311986DA5A /* Pods_Hipstagram.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01CA4E0848DD0A1D3E989834 /* Pods-Hipstagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hipstagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hipstagram/Pods-Hipstagram.release.xcconfig"; sourceTree = "<group>"; };
 		48E440461D8111A000874D92 /* Hipstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hipstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48E440491D8111A000874D92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48E4404B1D8111A000874D92 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +42,10 @@
 		48E440671D8113F500874D92 /* ImageFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFeedViewController.swift; sourceTree = "<group>"; };
 		48E440691D81140B00874D92 /* UploadImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadImageViewController.swift; sourceTree = "<group>"; };
 		48E4406B1D8114F700874D92 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		7A5DCECD9D01A2ECA7C7EFBA /* Pods-Hipstagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hipstagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hipstagram/Pods-Hipstagram.debug.xcconfig"; sourceTree = "<group>"; };
+		AE04D0221D8132F4002B151D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AE726C511D824B94009AEDC4 /* UncoveredContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UncoveredContentViewController.swift; sourceTree = "<group>"; };
+		B9C1D1E7CD744D311986DA5A /* Pods_Hipstagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hipstagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8131AA7DF803A8006C1BB20 /* Pods_Hipstagram.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +65,8 @@
 			children = (
 				48E440481D8111A000874D92 /* Hipstagram */,
 				48E440471D8111A000874D92 /* Products */,
+				B465A28F189DEF9D23E81FFF /* Pods */,
+				886F5224D7D71BDB2718C568 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,10 +92,10 @@
 			isa = PBXGroup;
 			children = (
 				48E4404D1D8111A000874D92 /* Main.storyboard */,
+				AE726C541D82543E009AEDC4 /* Launch_Story storyboards */,
 				48E440611D81137800874D92 /* ImageFeedStoryboard.storyboard */,
 				48E440631D81138800874D92 /* UploadImageStoryboard.storyboard */,
 				48E440651D81139800874D92 /* ProfileStoryboard.storyboard */,
-				48E4405F1D81128700874D92 /* LaunchStoryboard.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -92,8 +103,7 @@
 		48E4405E1D81123900874D92 /* View controllers */ = {
 			isa = PBXGroup;
 			children = (
-				48E4404B1D8111A000874D92 /* SignUpViewController.swift */,
-				48E4405C1D81123000874D92 /* SignInViewController.swift */,
+				AE726C531D8252A5009AEDC4 /* Launch_Story VCs */,
 				48E440671D8113F500874D92 /* ImageFeedViewController.swift */,
 				48E440691D81140B00874D92 /* UploadImageViewController.swift */,
 				48E4406B1D8114F700874D92 /* ProfileViewController.swift */,
@@ -106,10 +116,46 @@
 			children = (
 				48E440491D8111A000874D92 /* AppDelegate.swift */,
 				48E440501D8111A000874D92 /* Assets.xcassets */,
-				48E440521D8111A000874D92 /* LaunchScreen.storyboard */,
+				AE04D0221D8132F4002B151D /* GoogleService-Info.plist */,
 				48E440551D8111A000874D92 /* Info.plist */,
 			);
 			name = "Supporting files";
+			sourceTree = "<group>";
+		};
+		886F5224D7D71BDB2718C568 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9C1D1E7CD744D311986DA5A /* Pods_Hipstagram.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AE726C531D8252A5009AEDC4 /* Launch_Story VCs */ = {
+			isa = PBXGroup;
+			children = (
+				48E4404B1D8111A000874D92 /* SignUpViewController.swift */,
+				48E4405C1D81123000874D92 /* SignInViewController.swift */,
+				AE726C511D824B94009AEDC4 /* UncoveredContentViewController.swift */,
+			);
+			name = "Launch_Story VCs";
+			sourceTree = "<group>";
+		};
+		AE726C541D82543E009AEDC4 /* Launch_Story storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				48E440521D8111A000874D92 /* LaunchScreen.storyboard */,
+				48E4405F1D81128700874D92 /* LaunchStoryboard.storyboard */,
+			);
+			name = "Launch_Story storyboards";
+			sourceTree = "<group>";
+		};
+		B465A28F189DEF9D23E81FFF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7A5DCECD9D01A2ECA7C7EFBA /* Pods-Hipstagram.debug.xcconfig */,
+				01CA4E0848DD0A1D3E989834 /* Pods-Hipstagram.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,9 +165,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 48E440581D8111A000874D92 /* Build configuration list for PBXNativeTarget "Hipstagram" */;
 			buildPhases = (
+				4A6DF86881A8026E29B53A82 /* [CP] Check Pods Manifest.lock */,
 				48E440421D8111A000874D92 /* Sources */,
 				48E440431D8111A000874D92 /* Frameworks */,
 				48E440441D8111A000874D92 /* Resources */,
+				0BCA2E854EBEB0C19FB11208 /* [CP] Embed Pods Frameworks */,
+				382B2D8207B6CA42670A4602 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -172,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48E440641D81138800874D92 /* UploadImageStoryboard.storyboard in Resources */,
+				AE04D0231D8132F4002B151D /* GoogleService-Info.plist in Resources */,
 				48E440541D8111A000874D92 /* LaunchScreen.storyboard in Resources */,
 				48E440661D81139800874D92 /* ProfileStoryboard.storyboard in Resources */,
 				48E440511D8111A000874D92 /* Assets.xcassets in Resources */,
@@ -183,12 +233,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0BCA2E854EBEB0C19FB11208 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hipstagram/Pods-Hipstagram-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		382B2D8207B6CA42670A4602 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hipstagram/Pods-Hipstagram-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A6DF86881A8026E29B53A82 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		48E440421D8111A000874D92 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				48E4406C1D8114F700874D92 /* ProfileViewController.swift in Sources */,
+				AE726C521D824B94009AEDC4 /* UncoveredContentViewController.swift in Sources */,
 				48E4404C1D8111A000874D92 /* SignUpViewController.swift in Sources */,
 				48E4404A1D8111A000874D92 /* AppDelegate.swift in Sources */,
 				48E4406A1D81140B00874D92 /* UploadImageViewController.swift in Sources */,
@@ -306,6 +405,7 @@
 		};
 		48E440591D8111A000874D92 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A5DCECD9D01A2ECA7C7EFBA /* Pods-Hipstagram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Hipstagram/Info.plist;
@@ -317,6 +417,7 @@
 		};
 		48E4405A1D8111A000874D92 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01CA4E0848DD0A1D3E989834 /* Pods-Hipstagram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Hipstagram/Info.plist;
@@ -345,6 +446,7 @@
 				48E4405A1D8111A000874D92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,29 +7,58 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
-class SignInViewController: UIViewController {
+class SignInViewController: UncoveredContentViewController,UITextFieldDelegate {
 
+    @IBOutlet weak var emailTF: UITextField!
+    @IBOutlet weak var passwordTF: UITextField!
+    
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        self.emailTF.delegate = self
+        self.passwordTF.delegate = self
+        
+        self.hideKeyboardByTap()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        return true
     }
-    */
-
+    
+    
+    @IBAction func signInButtonPressed(sender: UIButton) {
+        
+        guard
+            let email = emailTF.text,
+            let password = passwordTF.text
+            else{
+                return
+                }
+        
+        FIRAuth.auth()?.signInWithEmail(email, password: password, completion: { (user, error) in
+            
+            if let hipsta = user{
+                
+                NSUserDefaults.standardUserDefaults().setObject(hipsta.uid, forKey: "userUID")
+                
+                self.performSegueWithIdentifier("mainSegue", sender: nil)
+                
+                }else {
+                
+                let alert = UIAlertController (title: "Failed to Hipsta", message: error?.localizedDescription, preferredStyle: .Alert)
+                let dismissAction = UIAlertAction(title: "Buzz Off", style: .Default , handler: nil)
+                
+                alert.addAction(dismissAction)
+                self.presentViewController(alert, animated: true, completion: nil)
+            }
+        })
+    }
 }

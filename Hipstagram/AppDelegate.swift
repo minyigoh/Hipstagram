@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,10 +16,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // +/- splash screen load time
+        NSThread .sleepForTimeInterval(2)
+        
+        // set background image
+        //[Info.plist->Supported interface orientations edited array[1,2]string as Portrait instead of Landscape
+        self.window!.layer.contents = (UIImage(named: "line.png")!.CGImage as! AnyObject)
+        
+        //Connect to Firebase by initializing code below
+        FIRApp.configure()
+        
+        //Check for existing key in userdefaults,if yes,set rooVC as tabBarController named HipstaTabBarController
+        if let _ =  NSUserDefaults.standardUserDefaults().objectForKey("userUID") as? String{
+            
+            let storyBoard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
+            
+            let tabBarController = storyBoard.instantiateViewControllerWithIdentifier ("HipstaTabBarController")
+            
+            self.window?.rootViewController = tabBarController
+        }
+
+ 
         return true
     }
 
+    
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

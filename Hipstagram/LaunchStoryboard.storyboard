@@ -1,30 +1,109 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="VJM-kq-Mc3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4DC-x6-cHY">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Sign Up View Controller-->
+        <!--SignUpViewController-->
         <scene sceneID="v92-1i-rd9">
             <objects>
-                <viewController id="VJM-kq-Mc3" customClass="SignUpViewController" customModule="Hipstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="SignUpViewController" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="flipHorizontal" id="VJM-kq-Mc3" customClass="SignUpViewController" customModule="Hipstagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VyM-ar-AzI"/>
                         <viewControllerLayoutGuide type="bottom" id="Uch-GZ-fwx"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Xvs-jD-6BN">
+                    <view key="view" contentMode="scaleAspectFit" id="Xvs-jD-6BN">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="5Tv-aK-7jj">
+                                <rect key="frame" x="175" y="344" width="250" height="120"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="aaL-TH-q5X">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="30"/>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="textFieldEditingDidBegin:" destination="VJM-kq-Mc3" eventType="editingDidBegin" id="YK9-uv-00D"/>
+                                            <action selector="textFieldEditingDidEnd:" destination="VJM-kq-Mc3" eventType="editingDidEnd" id="lZu-YD-hLv"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pgw-PK-TZn">
+                                        <rect key="frame" x="0.0" y="45" width="250" height="30"/>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="textFieldEditingDidBegin:" destination="VJM-kq-Mc3" eventType="editingDidBegin" id="b1B-9e-oS1"/>
+                                            <action selector="textFieldEditingDidEnd:" destination="VJM-kq-Mc3" eventType="editingDidEnd" id="Vtc-ih-ptN"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="DIb-4O-9yk">
+                                        <rect key="frame" x="0.0" y="90" width="250" height="30"/>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done" secureTextEntry="YES"/>
+                                        <connections>
+                                            <action selector="textFieldEditingDidBegin:" destination="VJM-kq-Mc3" eventType="editingDidBegin" id="Oy8-eu-X8g"/>
+                                            <action selector="textFieldEditingDidEnd:" destination="VJM-kq-Mc3" eventType="editingDidEnd" id="8wL-rt-5c5"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="DZX-L9-8XB"/>
+                                    <constraint firstAttribute="height" constant="120" id="JnO-i9-I3c"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hhx-w4-kJk">
+                                <rect key="frame" x="237" y="520" width="126" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="126" id="J8y-qy-CBC"/>
+                                    <constraint firstAttribute="height" constant="30" id="Qxi-H5-p0L"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="15"/>
+                                <state key="normal" title="I am Hipsta">
+                                    <color key="titleColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Xgz-91-LO8" kind="show" id="iqV-nl-Blj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eX2-RM-2oD">
+                                <rect key="frame" x="266" y="482" width="68" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="68" id="LrB-BL-1pN"/>
+                                    <constraint firstAttribute="height" constant="30" id="S4O-uC-rgr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="15"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <connections>
+                                    <action selector="signUpButtonPressed:" destination="VJM-kq-Mc3" eventType="touchUpInside" id="h9O-jT-MeM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="5Tv-aK-7jj" firstAttribute="centerX" secondItem="Xvs-jD-6BN" secondAttribute="centerX" id="ERo-pc-I77"/>
+                            <constraint firstItem="5Tv-aK-7jj" firstAttribute="top" secondItem="VyM-ar-AzI" secondAttribute="bottom" constant="280" id="KuB-yb-to1"/>
+                            <constraint firstItem="eX2-RM-2oD" firstAttribute="top" secondItem="5Tv-aK-7jj" secondAttribute="bottom" constant="18" id="Plw-oi-zXc"/>
+                            <constraint firstItem="Hhx-w4-kJk" firstAttribute="top" secondItem="eX2-RM-2oD" secondAttribute="bottom" constant="8" id="Vvp-nA-Kpy"/>
+                            <constraint firstItem="Hhx-w4-kJk" firstAttribute="centerX" secondItem="Xvs-jD-6BN" secondAttribute="centerX" id="bUr-Ff-hQY"/>
+                            <constraint firstItem="eX2-RM-2oD" firstAttribute="centerX" secondItem="Xvs-jD-6BN" secondAttribute="centerX" id="phy-f8-Mdp"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Hipstagram" id="QJ9-y1-nMz">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="JEX-he-QA0"/>
+                    </navigationItem>
                     <connections>
-                        <segue destination="kOw-gH-GPc" kind="presentation" id="R77-Q8-cBp"/>
+                        <outlet property="emailTF" destination="pgw-PK-TZn" id="ybs-0Z-7Ki"/>
+                        <outlet property="passwordTF" destination="DIb-4O-9yk" id="5vO-pO-Fx3"/>
+                        <outlet property="usernameTF" destination="aaL-TH-q5X" id="p2x-EE-zBb"/>
+                        <segue destination="kOw-gH-GPc" kind="presentation" identifier="mainSegue" modalTransitionStyle="flipHorizontal" id="R77-Q8-cBp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GRP-sP-5wk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="230" y="248"/>
+            <point key="canvasLocation" x="1042" y="248"/>
         </scene>
         <!--Main-->
         <scene sceneID="b9W-qb-HNk">
@@ -32,31 +111,108 @@
                 <viewControllerPlaceholder storyboardName="Main" id="kOw-gH-GPc" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LYZ-Zk-dgN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="737.5" y="718"/>
+            <point key="canvasLocation" x="1069" y="1028"/>
         </scene>
-        <!--Sign In View Controller-->
-        <scene sceneID="h5p-EG-n5d">
+        <!--SignUpNavigationViewController-->
+        <scene sceneID="Eok-ZI-C0J">
             <objects>
-                <viewController id="mXv-qp-r1Z" customClass="SignInViewController" customModule="Hipstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController title="SignUpNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" id="4DC-x6-cHY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xb1-Go-qmF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="VJM-kq-Mc3" kind="relationship" relationship="rootViewController" id="3hm-VD-4je"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eZQ-4f-3bM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="322" y="248"/>
+        </scene>
+        <!--SignInViewController-->
+        <scene sceneID="9Es-Mw-7Bq">
+            <objects>
+                <viewController title="SignInViewController" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="partialCurl" id="Xgz-91-LO8" customClass="SignInViewController" customModule="Hipstagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="VaY-z4-0Q5"/>
-                        <viewControllerLayoutGuide type="bottom" id="Vdb-on-DlP"/>
+                        <viewControllerLayoutGuide type="top" id="d9f-ei-UzZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="M5k-iO-9mQ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="jyE-ac-wat">
+                    <view key="view" contentMode="scaleAspectFit" id="2uf-gM-Nor">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="j4W-Da-IdW">
+                                <rect key="frame" x="175" y="344" width="250" height="75"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="lRL-rl-xb9">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="30"/>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="textFieldEditingDidBegin:" destination="Xgz-91-LO8" eventType="editingDidBegin" id="Rje-QP-Yug"/>
+                                            <action selector="textFieldEditingDidEnd:" destination="Xgz-91-LO8" eventType="editingDidEnd" id="dai-Kl-0gO"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rXO-ct-SGr">
+                                        <rect key="frame" x="0.0" y="45" width="250" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="5l2-ot-Ysu"/>
+                                            <constraint firstAttribute="height" constant="30" id="aO5-dz-M6Y"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done" secureTextEntry="YES"/>
+                                        <connections>
+                                            <action selector="textFieldEditingDidBegin:" destination="Xgz-91-LO8" eventType="editingDidBegin" id="0iB-Xv-JtC"/>
+                                            <action selector="textFieldEditingDidEnd:" destination="Xgz-91-LO8" eventType="editingDidEnd" id="aLh-9P-DsW"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="cRS-FJ-Wip"/>
+                                    <constraint firstAttribute="width" constant="250" id="fVl-EN-IBo"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USx-ut-jyL">
+                                <rect key="frame" x="273.5" y="437" width="52" height="30"/>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="15"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signInButtonPressed:" destination="Xgz-91-LO8" eventType="touchUpInside" id="R0O-iJ-DBK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="j4W-Da-IdW" firstAttribute="top" secondItem="d9f-ei-UzZ" secondAttribute="bottom" constant="280" id="2UG-YR-yeh"/>
+                            <constraint firstItem="USx-ut-jyL" firstAttribute="top" secondItem="j4W-Da-IdW" secondAttribute="bottom" constant="18" id="7m3-fj-3un"/>
+                            <constraint firstItem="USx-ut-jyL" firstAttribute="centerX" secondItem="2uf-gM-Nor" secondAttribute="centerX" id="JjW-Kr-8nB"/>
+                            <constraint firstItem="j4W-Da-IdW" firstAttribute="centerX" secondItem="2uf-gM-Nor" secondAttribute="centerX" id="KvV-3C-5Io"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Hipstagram" id="PyG-HC-9yL">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="p7v-RL-5p6"/>
+                    </navigationItem>
                     <connections>
-                        <segue destination="kOw-gH-GPc" kind="presentation" id="0zJ-IH-MQY"/>
+                        <outlet property="emailTF" destination="lRL-rl-xb9" id="x47-4b-SDu"/>
+                        <outlet property="passwordTF" destination="rXO-ct-SGr" id="Vg4-bl-wTP"/>
+                        <segue destination="kOw-gH-GPc" kind="presentation" identifier="mainSegue" modalTransitionStyle="crossDissolve" id="yTo-7d-Csy"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Du4-Mj-ZNC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6uv-L7-sTQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="235" y="1004"/>
+            <point key="canvasLocation" x="322" y="1028"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0zJ-IH-MQY"/>
+        <segue reference="yTo-7d-Csy"/>
     </inferredMetricsTieBreakers>
 </document>
