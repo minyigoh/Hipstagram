@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--SignUpViewController-->
+        <!--Sign Up View Controller-->
         <scene sceneID="v92-1i-rd9">
             <objects>
-                <viewController title="SignUpViewController" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="flipHorizontal" id="VJM-kq-Mc3" customClass="SignUpViewController" customModule="Hipstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Sign Up View Controller" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="flipHorizontal" id="VJM-kq-Mc3" customClass="SignUpViewController" customModule="Hipstagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VyM-ar-AzI"/>
                         <viewControllerLayoutGuide type="bottom" id="Uch-GZ-fwx"/>
@@ -113,10 +113,10 @@
             </objects>
             <point key="canvasLocation" x="1069" y="1028"/>
         </scene>
-        <!--SignUpNavigationViewController-->
+        <!--Sign Up Navigation View Controller-->
         <scene sceneID="Eok-ZI-C0J">
             <objects>
-                <navigationController title="SignUpNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" id="4DC-x6-cHY" sceneMemberID="viewController">
+                <navigationController title="Sign Up Navigation View Controller" automaticallyAdjustsScrollViewInsets="NO" id="4DC-x6-cHY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xb1-Go-qmF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -137,10 +137,10 @@
             </objects>
             <point key="canvasLocation" x="322" y="248"/>
         </scene>
-        <!--SignInViewController-->
+        <!--Sign In View Controller-->
         <scene sceneID="9Es-Mw-7Bq">
             <objects>
-                <viewController title="SignInViewController" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="partialCurl" id="Xgz-91-LO8" customClass="SignInViewController" customModule="Hipstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Sign In View Controller" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="partialCurl" id="Xgz-91-LO8" customClass="SignInViewController" customModule="Hipstagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="d9f-ei-UzZ"/>
                         <viewControllerLayoutGuide type="bottom" id="M5k-iO-9mQ"/>

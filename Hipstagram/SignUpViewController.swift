@@ -74,10 +74,14 @@ class SignUpViewController: UncoveredContentViewController,UITextFieldDelegate {
                 
                 self.performSegueWithIdentifier("mainSegue", sender: nil)
                 
-                let firebaseRef = FIRDatabase.database().reference()
-                let currentUserRef = firebaseRef.child("Hipsta Users").child(hipsta.uid)
-                let userDict = ["username" : username, "email" : email]
-                currentUserRef.setValue(userDict)
+                let currentHipstaRef = DataService.hipstaRef.child(hipsta.uid)
+                let hipstaDict = ["username" : username, "email" : email]
+                currentHipstaRef.setValue(hipstaDict)
+                
+//                let firebaseRef = FIRDatabase.database().reference()
+//                let currentUserRef = firebaseRef.child("Hipsta Users").child(hipsta.uid)
+//                let userDict = ["username" : username, "email" : email]
+//                currentUserRef.setValue(userDict)
                 
             }else {
                 
