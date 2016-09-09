@@ -24,16 +24,28 @@
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="30"/>
                                         <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="textFieldEditingDidBegin:" destination="VJM-kq-Mc3" eventType="editingDidBegin" id="YK9-uv-00D"/>
+                                            <action selector="textFieldEditingDidEnd:" destination="VJM-kq-Mc3" eventType="editingDidEnd" id="lZu-YD-hLv"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pgw-PK-TZn">
                                         <rect key="frame" x="0.0" y="45" width="250" height="30"/>
                                         <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="textFieldEditingDidBegin:" destination="VJM-kq-Mc3" eventType="editingDidBegin" id="b1B-9e-oS1"/>
+                                            <action selector="textFieldEditingDidEnd:" destination="VJM-kq-Mc3" eventType="editingDidEnd" id="Vtc-ih-ptN"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="DIb-4O-9yk">
                                         <rect key="frame" x="0.0" y="90" width="250" height="30"/>
                                         <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done" secureTextEntry="YES"/>
+                                        <connections>
+                                            <action selector="textFieldEditingDidBegin:" destination="VJM-kq-Mc3" eventType="editingDidBegin" id="Oy8-eu-X8g"/>
+                                            <action selector="textFieldEditingDidEnd:" destination="VJM-kq-Mc3" eventType="editingDidEnd" id="8wL-rt-5c5"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -49,7 +61,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="15"/>
                                 <state key="normal" title="I am Hipsta">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
                                     <segue destination="Xgz-91-LO8" kind="show" id="iqV-nl-Blj"/>
@@ -63,7 +75,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="15"/>
                                 <state key="normal" title="Sign Up">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
                                 </state>
                                 <connections>
                                     <action selector="signUpButtonPressed:" destination="VJM-kq-Mc3" eventType="touchUpInside" id="h9O-jT-MeM"/>
@@ -144,6 +156,10 @@
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="30"/>
                                         <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                        <connections>
+                                            <action selector="textFieldEditingDidBegin:" destination="Xgz-91-LO8" eventType="editingDidBegin" id="Rje-QP-Yug"/>
+                                            <action selector="textFieldEditingDidEnd:" destination="Xgz-91-LO8" eventType="editingDidEnd" id="dai-Kl-0gO"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rXO-ct-SGr">
                                         <rect key="frame" x="0.0" y="45" width="250" height="30"/>
@@ -153,6 +169,10 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done" secureTextEntry="YES"/>
+                                        <connections>
+                                            <action selector="textFieldEditingDidBegin:" destination="Xgz-91-LO8" eventType="editingDidBegin" id="0iB-Xv-JtC"/>
+                                            <action selector="textFieldEditingDidEnd:" destination="Xgz-91-LO8" eventType="editingDidEnd" id="aLh-9P-DsW"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <constraints>

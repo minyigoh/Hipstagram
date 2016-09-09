@@ -17,19 +17,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hipstagram" translatesAutoresizingMaskIntoConstraints="NO" id="TCW-k1-5RV">
-                                <rect key="frame" x="196" y="263" width="209" height="74"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hipstagram" translatesAutoresizingMaskIntoConstraints="NO" id="Dao-Oy-piI">
+                                <rect key="frame" x="146" y="215" width="309" height="170"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="74" id="PqY-2a-3s5"/>
-                                    <constraint firstAttribute="width" constant="209" id="yN5-ZQ-wRe"/>
+                                    <constraint firstAttribute="height" constant="170" id="nYf-uR-aoz"/>
+                                    <constraint firstAttribute="width" constant="309" id="waZ-Pm-lAy"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="TCW-k1-5RV" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Ms1-wL-XHX"/>
-                            <constraint firstItem="TCW-k1-5RV" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="kJp-44-YoU"/>
+                            <constraint firstItem="Dao-Oy-piI" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="0bv-bm-o8k"/>
+                            <constraint firstItem="Dao-Oy-piI" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="rik-0A-INX"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -39,6 +38,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Hipstagram" width="548" height="122"/>
+        <image name="hipstagram" width="548" height="122"/>
     </resources>
 </document>

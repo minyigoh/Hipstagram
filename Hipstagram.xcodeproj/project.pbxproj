@@ -21,6 +21,7 @@
 		48E4406A1D81140B00874D92 /* UploadImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E440691D81140B00874D92 /* UploadImageViewController.swift */; };
 		48E4406C1D8114F700874D92 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E4406B1D8114F700874D92 /* ProfileViewController.swift */; };
 		AE04D0231D8132F4002B151D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE04D0221D8132F4002B151D /* GoogleService-Info.plist */; };
+		AE726C521D824B94009AEDC4 /* UncoveredContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE726C511D824B94009AEDC4 /* UncoveredContentViewController.swift */; };
 		B8131AA7DF803A8006C1BB20 /* Pods_Hipstagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C1D1E7CD744D311986DA5A /* Pods_Hipstagram.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		48E4406B1D8114F700874D92 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		7A5DCECD9D01A2ECA7C7EFBA /* Pods-Hipstagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hipstagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hipstagram/Pods-Hipstagram.debug.xcconfig"; sourceTree = "<group>"; };
 		AE04D0221D8132F4002B151D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AE726C511D824B94009AEDC4 /* UncoveredContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UncoveredContentViewController.swift; sourceTree = "<group>"; };
 		B9C1D1E7CD744D311986DA5A /* Pods_Hipstagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hipstagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -90,7 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				48E4404D1D8111A000874D92 /* Main.storyboard */,
-				48E4405F1D81128700874D92 /* LaunchStoryboard.storyboard */,
+				AE726C541D82543E009AEDC4 /* Launch_Story storyboards */,
 				48E440611D81137800874D92 /* ImageFeedStoryboard.storyboard */,
 				48E440631D81138800874D92 /* UploadImageStoryboard.storyboard */,
 				48E440651D81139800874D92 /* ProfileStoryboard.storyboard */,
@@ -101,8 +103,7 @@
 		48E4405E1D81123900874D92 /* View controllers */ = {
 			isa = PBXGroup;
 			children = (
-				48E4404B1D8111A000874D92 /* SignUpViewController.swift */,
-				48E4405C1D81123000874D92 /* SignInViewController.swift */,
+				AE726C531D8252A5009AEDC4 /* Launch_Story VCs */,
 				48E440671D8113F500874D92 /* ImageFeedViewController.swift */,
 				48E440691D81140B00874D92 /* UploadImageViewController.swift */,
 				48E4406B1D8114F700874D92 /* ProfileViewController.swift */,
@@ -117,7 +118,6 @@
 				48E440501D8111A000874D92 /* Assets.xcassets */,
 				AE04D0221D8132F4002B151D /* GoogleService-Info.plist */,
 				48E440551D8111A000874D92 /* Info.plist */,
-				48E440521D8111A000874D92 /* LaunchScreen.storyboard */,
 			);
 			name = "Supporting files";
 			sourceTree = "<group>";
@@ -128,6 +128,25 @@
 				B9C1D1E7CD744D311986DA5A /* Pods_Hipstagram.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AE726C531D8252A5009AEDC4 /* Launch_Story VCs */ = {
+			isa = PBXGroup;
+			children = (
+				48E4404B1D8111A000874D92 /* SignUpViewController.swift */,
+				48E4405C1D81123000874D92 /* SignInViewController.swift */,
+				AE726C511D824B94009AEDC4 /* UncoveredContentViewController.swift */,
+			);
+			name = "Launch_Story VCs";
+			sourceTree = "<group>";
+		};
+		AE726C541D82543E009AEDC4 /* Launch_Story storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				48E440521D8111A000874D92 /* LaunchScreen.storyboard */,
+				48E4405F1D81128700874D92 /* LaunchStoryboard.storyboard */,
+			);
+			name = "Launch_Story storyboards";
 			sourceTree = "<group>";
 		};
 		B465A28F189DEF9D23E81FFF /* Pods */ = {
@@ -268,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48E4406C1D8114F700874D92 /* ProfileViewController.swift in Sources */,
+				AE726C521D824B94009AEDC4 /* UncoveredContentViewController.swift in Sources */,
 				48E4404C1D8111A000874D92 /* SignUpViewController.swift in Sources */,
 				48E4404A1D8111A000874D92 /* AppDelegate.swift in Sources */,
 				48E4406A1D81140B00874D92 /* UploadImageViewController.swift in Sources */,
