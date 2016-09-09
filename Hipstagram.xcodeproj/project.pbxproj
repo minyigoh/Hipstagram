@@ -91,8 +91,8 @@
 		48E4405B1D8111BA00874D92 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				48E4404D1D8111A000874D92 /* Main.storyboard */,
 				AE726C541D82543E009AEDC4 /* Launch_Story storyboards */,
+				48E4404D1D8111A000874D92 /* Main.storyboard */,
 				48E440611D81137800874D92 /* ImageFeedStoryboard.storyboard */,
 				48E440631D81138800874D92 /* UploadImageStoryboard.storyboard */,
 				48E440651D81139800874D92 /* ProfileStoryboard.storyboard */,

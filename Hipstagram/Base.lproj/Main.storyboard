@@ -28,7 +28,7 @@
         <scene sceneID="7pe-Fa-8Cf">
             <objects>
                 <viewControllerPlaceholder storyboardName="ImageFeedStoryboard" id="ail-ma-vsJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="KLd-Ak-otf"/>
+                    <tabBarItem key="tabBarItem" title="ImageFeed" id="KLd-Ak-otf"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kop-sc-dHs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -38,7 +38,7 @@
         <scene sceneID="bnY-um-K7a">
             <objects>
                 <viewControllerPlaceholder storyboardName="UploadImageStoryboard" id="KP5-De-Km8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Es2-tL-YXT"/>
+                    <tabBarItem key="tabBarItem" title="UploadImage" id="Es2-tL-YXT"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lKG-ir-9zF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -48,7 +48,7 @@
         <scene sceneID="Ixl-yG-fWL">
             <objects>
                 <viewControllerPlaceholder storyboardName="ProfileStoryboard" id="pOE-NB-LcA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="gpC-HX-o0i"/>
+                    <tabBarItem key="tabBarItem" title="Profile" id="gpC-HX-o0i"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="viD-NW-wIb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
