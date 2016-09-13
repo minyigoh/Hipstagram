@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48DB69F81D826F0800B689EC /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB69F71D826F0800B689EC /* DataService.swift */; };
 		48E4404A1D8111A000874D92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E440491D8111A000874D92 /* AppDelegate.swift */; };
 		48E4404C1D8111A000874D92 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E4404B1D8111A000874D92 /* SignUpViewController.swift */; };
 		48E4404F1D8111A000874D92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48E4404D1D8111A000874D92 /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		01CA4E0848DD0A1D3E989834 /* Pods-Hipstagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hipstagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hipstagram/Pods-Hipstagram.release.xcconfig"; sourceTree = "<group>"; };
+		48DB69F71D826F0800B689EC /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		48E440461D8111A000874D92 /* Hipstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hipstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48E440491D8111A000874D92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48E4404B1D8111A000874D92 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +70,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		48DB69F91D826F1200B689EC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				48DB69F71D826F0800B689EC /* DataService.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 		48E4403D1D8111A000874D92 = {
 			isa = PBXGroup;
 			children = (
@@ -317,6 +327,7 @@
 				AEEFF9601D87FDAC00030368 /* Profile.swift in Sources */,
 				48E440681D8113F500874D92 /* ImageFeedViewController.swift in Sources */,
 				48E4405D1D81123000874D92 /* SignInViewController.swift in Sources */,
+				48DB69F81D826F0800B689EC /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

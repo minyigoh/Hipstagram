@@ -2,15 +2,25 @@
 //  DataService.swift
 //  Hipstagram
 //
-//  Created by Joshua Su on 09/09/2016.
-//  Copyright © 2016 Goh Min-Yi. All rights reserved.
-//
+//  Created by Goh Min-Yi on 09/09/2016.
+
 
 import Foundation
-import FirebaseDatabase
+//<<<<<<< HEAD
+//import FirebaseDatabase
+//
+//struct DataService {
+//    
+//    static var rootRef = FIRDatabase.database().reference()
+//    
+//=======
+import Firebase
+import FirebaseStorage
 
-struct DataService {
-    
-    static var rootRef = FIRDatabase.database().reference()
-    static var hipstaRef = rootRef.child("Hipsta Users")
+class DataService {
+    static let storageRef = FIRStorage.storage().referenceForURL("gs://hipstagram-810b0.appspot.com")
+    static let imagesRef = storageRef.child("images")
+    static let testRef = imagesRef.child("")
+    static let databaseRef = FIRDatabase.database().reference()
+    static let userRef = databaseRef.child("Hipsta Users")
 }

@@ -24,9 +24,6 @@ class ImageFeedViewController: UIViewController,UITableViewDelegate,UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        fetchHipstas()
-      
     }
     
 
@@ -43,7 +40,6 @@ class ImageFeedViewController: UIViewController,UITableViewDelegate,UITableViewD
  
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return 1
     }
     

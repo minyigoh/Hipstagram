@@ -7,29 +7,59 @@
 //
 
 import UIKit
+import Firebase
+import Fusuma
 
-class UploadImageViewController: UIViewController {
-
+class UploadImageViewController: UIViewController, FusumaDelegate {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        let fusuma = FusumaViewController()
+        fusuma.delegate = self
+        fusuma.hasVideo = false // If you want to let the users allow to use video.
+        self.presentViewController(fusuma, animated: true, completion: nil)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewDidAppear(animated: Bool) {
+        
+    }
+    
+    func fusumaImageSelected(image: UIImage) {
+        let imageData: NSData = UIImageJPEGRepresentation(image, 0.25)!
+        let filePath = "\(FIRAuth.auth()!.currentUser!.uid)/\(image)"
+        let metaData = FIRStorageMetadata()
+        metaData.contentType = "image/jpg"
+        
+        // Upload image to the folder 'images'
+        let uploadTask = DataService.imagesRef.child(filePath).putData(imageData, metadata: metaData, completion: { (metadata, error) in
+            if (error != nil) {
+                let error = NSError?()
+                print("Error: \(error!.localizedDescription)")
+            } else {
+                // Metadata contains file metadata such as size, content-type, and download URL.
+                let downloadURL = metadata!.downloadURL()!.absoluteString
+                DataService.userRef.child(FIRAuth.auth()!.currentUser!.uid).child("hipstaPhotos").childByAutoId().updateChildValues(["photoURL": downloadURL])
+            }
+        })
+        
+        uploadTask.observeStatus(.Success, handler: { (snapshot) in
+            print("Upload completed")
+        })
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func fusumaDismissedWithImage(image: UIImage) {
+        // Present ImageFeedViewController
+//        let imageFeedViewController = ImageFeedViewController()
+//        presentViewController(imageFeedViewController, animated: true, completion: nil)
     }
-    */
+    
+    func fusumaVideoCompleted(withFileURL fileURL: NSURL) {
+    }
+    
+    func fusumaCameraRollUnauthorized() {
+        print("Camera roll unauthorized")
+    }
 
 }
