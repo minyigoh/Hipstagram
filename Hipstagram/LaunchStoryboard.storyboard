@@ -23,7 +23,7 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="aaL-TH-q5X">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="30"/>
                                         <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                         <connections>
                                             <action selector="textFieldEditingDidBegin:" destination="VJM-kq-Mc3" eventType="editingDidBegin" id="YK9-uv-00D"/>
                                             <action selector="textFieldEditingDidEnd:" destination="VJM-kq-Mc3" eventType="editingDidEnd" id="lZu-YD-hLv"/>

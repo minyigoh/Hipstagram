@@ -8,7 +8,7 @@
 
 import Foundation
 
-class hipsta {
+class hipsta: NSObject {
     
     static var currentHipstaUid: String {
         return NSUserDefaults.standardUserDefaults().objectForKey("userUID") as! String
