@@ -6,14 +6,6 @@
 
 
 import Foundation
-//<<<<<<< HEAD
-//import FirebaseDatabase
-//
-//struct DataService {
-//    
-//    static var rootRef = FIRDatabase.database().reference()
-//    
-//=======
 import Firebase
 import FirebaseStorage
 
@@ -24,3 +16,4 @@ class DataService {
     static let databaseRef = FIRDatabase.database().reference()
     static let userRef = databaseRef.child("Hipsta Users")
 }
+

@@ -29,17 +29,23 @@ class ImageFeedViewController: UIViewController,UITableViewDelegate,UITableViewD
 
 //     MARK: - Table View Data Source
     
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
         if let feed = ImagePost.feed{
+            
             return feed.count
+            
         }else{
+            
         return 0
+            
         }
     }
  
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return 1
     }
     
@@ -53,7 +59,6 @@ class ImageFeedViewController: UIViewController,UITableViewDelegate,UITableViewD
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         let hipstaPost = ImagePost.feed![postIndex(indexPath.section)]
         let cell = tableView.dequeueReusableCellWithIdentifier("ImagePostCell") as! ImagePostCell
-        
         cell.captionLabel.text = hipstaPost.caption
         cell.imgView.image = hipstaPost.image
         return cell
