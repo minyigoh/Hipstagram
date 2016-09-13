@@ -8,56 +8,58 @@
 
 import UIKit
 import Firebase
-import Photos
+import Fusuma
 
-protocol UploadImageViewControllerDelegate {
-    func uploadToImageFeed (image: UIImage)
-}
-
-class UploadImageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
-    var delegate: ImageFeedViewController?
+class UploadImageViewController: UIViewController, FusumaDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let fusuma = FusumaViewController()
+        fusuma.delegate = self
+        fusuma.hasVideo = false // If you want to let the users allow to use video.
+        self.presentViewController(fusuma, animated: true, completion: nil)
     }
     
     override func viewDidAppear(animated: Bool) {
-        // Setting the imagePicker to be PhotoLibrary by default
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary;
-        imagePicker.allowsEditing = false
-        self.presentViewController(imagePicker, animated: true, completion: nil)
+        
     }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-
-        // Retrieving the picked image's URL
-        let imageURL = info[UIImagePickerControllerReferenceURL] as! NSURL
+    func fusumaImageSelected(image: UIImage) {
+        let imageData: NSData = UIImageJPEGRepresentation(image, 0.25)!
+        let filePath = "\(FIRAuth.auth()!.currentUser!.uid)/\(image)"
+        let metaData = FIRStorageMetadata()
+        metaData.contentType = "image/jpg"
         
-        let assets = PHAsset.fetchAssetsWithALAssetURLs([imageURL], options: nil)
-        let asset = assets.firstObject
-        asset?.requestContentEditingInputWithOptions(nil, completionHandler: { (contentEditingInput, info) in
-            // Retrieving the picked image's local URL
-            let imageFileURL = contentEditingInput?.fullSizeImageURL
-            let imageName = imageFileURL?.lastPathComponent
-            
-            // Upload image to the folder 'images'
-            let uploadTask = DataService.imagesRef.child(imageName!).putFile(imageFileURL!, metadata: nil) { metadata, error in
-                if (error != nil) {
-                    let error = NSError?()
-                    print("Error: \(error!.localizedDescription)")
-                } else {
-                    // Metadata contains file metadata such as size, content-type, and download URL.
-                    let downloadURL = metadata!.downloadURL
-                }
+        // Upload image to the folder 'images'
+        let uploadTask = DataService.imagesRef.child(filePath).putData(imageData, metadata: metaData, completion: { (metadata, error) in
+            if (error != nil) {
+                let error = NSError?()
+                print("Error: \(error!.localizedDescription)")
+            } else {
+                // Metadata contains file metadata such as size, content-type, and download URL.
+                let downloadURL = metadata!.downloadURL()!.absoluteString
+                DataService.userRef.child(FIRAuth.auth()!.currentUser!.uid).child("hipstaPhotos").childByAutoId().updateChildValues(["photoURL": downloadURL])
             }
-            
-            uploadTask.observeStatus(.Success, handler: { (snapshot) in
-                // Present the ImageFeedViewController
-            })
         })
-        dismissViewControllerAnimated(true, completion: nil)
+        
+        uploadTask.observeStatus(.Success, handler: { (snapshot) in
+            print("Upload completed")
+        })
     }
+    
+
+    
+    func fusumaDismissedWithImage(image: UIImage) {
+        // Present ImageFeedViewController
+//        let imageFeedViewController = ImageFeedViewController()
+//        presentViewController(imageFeedViewController, animated: true, completion: nil)
+    }
+    
+    func fusumaVideoCompleted(withFileURL fileURL: NSURL) {
+    }
+    
+    func fusumaCameraRollUnauthorized() {
+        print("Camera roll unauthorized")
+    }
+
 }

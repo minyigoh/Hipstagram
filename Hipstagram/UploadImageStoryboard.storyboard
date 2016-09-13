@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Upload Image View Controller-->
+        <!--UploadImage-->
         <scene sceneID="U73-iX-ZR5">
             <objects>
                 <viewController storyboardIdentifier="UploadImageViewController" id="0jB-sW-F8L" customClass="UploadImageViewController" customModule="Hipstagram" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,10 +18,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="UploadImage" id="7UM-FU-ay9"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mrg-WL-zOR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="296" y="366"/>
+            <point key="canvasLocation" x="1040" y="44"/>
         </scene>
     </scenes>
 </document>
