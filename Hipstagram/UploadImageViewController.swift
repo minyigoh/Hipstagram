@@ -7,29 +7,57 @@
 //
 
 import UIKit
+import Firebase
+import Photos
 
-class UploadImageViewController: UIViewController {
+protocol UploadImageViewControllerDelegate {
+    func uploadToImageFeed (image: UIImage)
+}
 
+class UploadImageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    var delegate: ImageFeedViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewDidAppear(animated: Bool) {
+        // Setting the imagePicker to be PhotoLibrary by default
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary;
+        imagePicker.allowsEditing = false
+        self.presentViewController(imagePicker, animated: true, completion: nil)
     }
-    */
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
 
+        // Retrieving the picked image's URL
+        let imageURL = info[UIImagePickerControllerReferenceURL] as! NSURL
+        
+        let assets = PHAsset.fetchAssetsWithALAssetURLs([imageURL], options: nil)
+        let asset = assets.firstObject
+        asset?.requestContentEditingInputWithOptions(nil, completionHandler: { (contentEditingInput, info) in
+            // Retrieving the picked image's local URL
+            let imageFileURL = contentEditingInput?.fullSizeImageURL
+            let imageName = imageFileURL?.lastPathComponent
+            
+            // Upload image to the folder 'images'
+            let uploadTask = DataService.imagesRef.child(imageName!).putFile(imageFileURL!, metadata: nil) { metadata, error in
+                if (error != nil) {
+                    let error = NSError?()
+                    print("Error: \(error!.localizedDescription)")
+                } else {
+                    // Metadata contains file metadata such as size, content-type, and download URL.
+                    let downloadURL = metadata!.downloadURL
+                }
+            }
+            
+            uploadTask.observeStatus(.Success, handler: { (snapshot) in
+                // Present the ImageFeedViewController
+            })
+        })
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 }

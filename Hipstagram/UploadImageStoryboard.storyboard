@@ -8,7 +8,7 @@
         <!--Upload Image View Controller-->
         <scene sceneID="U73-iX-ZR5">
             <objects>
-                <viewController id="0jB-sW-F8L" customClass="UploadImageViewController" customModule="Hipstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UploadImageViewController" id="0jB-sW-F8L" customClass="UploadImageViewController" customModule="Hipstagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QMi-80-f4U"/>
                         <viewControllerLayoutGuide type="bottom" id="jm8-DX-Hhg"/>
