@@ -82,7 +82,7 @@ class ImageFeedViewController: UIViewController,UITableViewDelegate,UITableViewD
 //    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 //        let hipstaPost = ImagePost.feed![postIndex(section)]
 //        let headerCell = tableView.dequeueReusableCellWithIdentifier("ImagePostHeaderCell") as! ImagePostHeaderCell
-//        if hipstaPost.creator ==
+//        if hipstaPost.creator == Profile.curre
 //
 //    }
     

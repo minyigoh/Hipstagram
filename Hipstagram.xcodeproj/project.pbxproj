@@ -25,6 +25,7 @@
 		AE0A1FC91D82A4BD000C6CAF /* Hipsta.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0A1FC81D82A4BD000C6CAF /* Hipsta.swift */; };
 		AE726C521D824B94009AEDC4 /* UncoveredContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE726C511D824B94009AEDC4 /* UncoveredContentViewController.swift */; };
 		AEB5914B1D87DE0A00C3366D /* ImagePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB5914A1D87DE0A00C3366D /* ImagePost.swift */; };
+		AEEFF9601D87FDAC00030368 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEFF95F1D87FDAC00030368 /* Profile.swift */; };
 		B8131AA7DF803A8006C1BB20 /* Pods_Hipstagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C1D1E7CD744D311986DA5A /* Pods_Hipstagram.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		AE0A1FC81D82A4BD000C6CAF /* Hipsta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hipsta.swift; sourceTree = "<group>"; };
 		AE726C511D824B94009AEDC4 /* UncoveredContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UncoveredContentViewController.swift; sourceTree = "<group>"; };
 		AEB5914A1D87DE0A00C3366D /* ImagePost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePost.swift; sourceTree = "<group>"; };
+		AEEFF95F1D87FDAC00030368 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		B9C1D1E7CD744D311986DA5A /* Pods_Hipstagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hipstagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -160,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				AE0A1FC81D82A4BD000C6CAF /* Hipsta.swift */,
+				AEEFF95F1D87FDAC00030368 /* Profile.swift */,
 				AE0A1FC41D829EA1000C6CAF /* DataService.swift */,
 				AEB5914A1D87DE0A00C3366D /* ImagePost.swift */,
 			);
@@ -311,6 +314,7 @@
 				AEB5914B1D87DE0A00C3366D /* ImagePost.swift in Sources */,
 				AE0A1FC91D82A4BD000C6CAF /* Hipsta.swift in Sources */,
 				48E4406A1D81140B00874D92 /* UploadImageViewController.swift in Sources */,
+				AEEFF9601D87FDAC00030368 /* Profile.swift in Sources */,
 				48E440681D8113F500874D92 /* ImageFeedViewController.swift in Sources */,
 				48E4405D1D81123000874D92 /* SignInViewController.swift in Sources */,
 			);

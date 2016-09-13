@@ -24,10 +24,12 @@ class ImagePost {
 
 }
 
+
 class ImagePostCell: UITableViewCell{
     @IBOutlet weak var captionLabel: UILabel!
     @IBOutlet weak var imgView: UIImageView!
 }
+
 
 class ImagePostHeaderCell:UITableViewCell{
     @IBOutlet weak var profilePicture: UIImageView!
