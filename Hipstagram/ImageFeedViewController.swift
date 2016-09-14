@@ -25,7 +25,6 @@ class ImageFeedViewController: UIViewController,UITableViewDelegate,UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
 
 //     MARK: - Table View Data Source
     

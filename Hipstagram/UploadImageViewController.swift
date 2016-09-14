@@ -12,32 +12,57 @@ import Fusuma
 
 class UploadImageViewController: UIViewController, FusumaDelegate {
     
+    var cameraIsShown: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+    }
+    
+    override func viewWillAppear(animated: Bool) {
         let fusuma = FusumaViewController()
         fusuma.delegate = self
         fusuma.hasVideo = false // If you want to let the users allow to use video.
-        self.presentViewController(fusuma, animated: true, completion: nil)
+        
+        switch cameraIsShown {
+        case false:
+            self.presentViewController(fusuma, animated: true, completion: nil)
+            cameraIsShown = true
+        default:
+            return
+        }
     }
     
-    override func viewDidAppear(animated: Bool) {
-        
+    func presentHipstaTabBarController() {
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let tabBarController = mainStoryboard.instantiateViewControllerWithIdentifier("HipstaTabBarController")
+        presentViewController(tabBarController, animated: false, completion: nil)
+        cameraIsShown = false
     }
+    
+    
     
     func fusumaImageSelected(image: UIImage) {
+        // Converts UIImage into NSData
         let imageData: NSData = UIImageJPEGRepresentation(image, 0.25)!
         let filePath = "\(FIRAuth.auth()!.currentUser!.uid)/\(image)"
+        
+        // Adding metadata - type to the image
         let metaData = FIRStorageMetadata()
         metaData.contentType = "image/jpg"
         
-        // Upload image to the folder 'images'
+        // Upload image to Firebase Storage
+        // images >> User.uid >> image
         let uploadTask = DataService.imagesRef.child(filePath).putData(imageData, metadata: metaData, completion: { (metadata, error) in
             if (error != nil) {
                 let error = NSError?()
                 print("Error: \(error!.localizedDescription)")
             } else {
-                // Metadata contains file metadata such as size, content-type, and download URL.
+                // Obtain the metadata - download URL and converts it into String
                 let downloadURL = metadata!.downloadURL()!.absoluteString
+                
+                // Storing download URL into Firebase Database
+                // Hipsta Users >> User.uid >> hipstaPhotos >> photoID >> photoURL: ___
                 DataService.userRef.child(FIRAuth.auth()!.currentUser!.uid).child("hipstaPhotos").childByAutoId().updateChildValues(["photoURL": downloadURL])
             }
         })
@@ -47,19 +72,18 @@ class UploadImageViewController: UIViewController, FusumaDelegate {
         })
     }
     
-
+    func fusumaClosed() {
+        // If fusuma is closed (i.e. the "X" button is pressed), perform presentHipstaTabBarController
+        presentHipstaTabBarController()
+    }
     
     func fusumaDismissedWithImage(image: UIImage) {
-        // Present ImageFeedViewController
-//        let imageFeedViewController = ImageFeedViewController()
-//        presentViewController(imageFeedViewController, animated: true, completion: nil)
+        // If fusuma is dismissed with an image being selected or captured, perform presentHipstaTabBarController
+        presentHipstaTabBarController()
     }
     
-    func fusumaVideoCompleted(withFileURL fileURL: NSURL) {
-    }
+    func fusumaVideoCompleted(withFileURL fileURL: NSURL) {}
     
-    func fusumaCameraRollUnauthorized() {
-        print("Camera roll unauthorized")
-    }
+    func fusumaCameraRollUnauthorized() {}
 
 }

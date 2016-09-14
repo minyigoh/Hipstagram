@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Profile View Controller-->
+        <!--Profile-->
         <scene sceneID="lg0-ZS-QfM">
             <objects>
-                <viewController id="Wf6-zl-mrb" customClass="ProfileViewController" customModule="Hipstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" id="Wf6-zl-mrb" customClass="ProfileViewController" customModule="Hipstagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kjx-Pm-222"/>
                         <viewControllerLayoutGuide type="bottom" id="rLK-fO-d3d"/>
@@ -18,6 +18,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Profile" id="EA4-9B-krv"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CYo-gn-BHI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

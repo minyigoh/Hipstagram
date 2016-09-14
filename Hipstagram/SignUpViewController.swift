@@ -74,7 +74,7 @@ class SignUpViewController: UncoveredContentViewController,UITextFieldDelegate {
                 
                 self.performSegueWithIdentifier("mainSegue", sender: nil)
                 
-                let currentHipstaRef = DataService.hipstaRef.child(hipsta.uid)
+                let currentHipstaRef = DataService.userRef.child(hipsta.uid)
                 let hipstaDict = ["username" : username, "email" : email]
                 currentHipstaRef.setValue(hipstaDict)
                 
