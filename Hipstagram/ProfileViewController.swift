@@ -7,28 +7,37 @@
 //
 
 import UIKit
+import Firebase
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        navigationItem.title = hipsta.currentHipstaUsername // To set current user's username
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func onSignoutButtonPressed(sender: UIBarButtonItem) {
+        try! FIRAuth.auth()?.signOut()
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("userUID")
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("username")
+        
+        let launchStoryboard = UIStoryboard(name: "LaunchStoryboard", bundle: NSBundle.mainBundle())
+        let viewController = launchStoryboard.instantiateViewControllerWithIdentifier("SignUpViewController")
+        self.presentViewController(viewController, animated: true, completion: nil)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 30
     }
-    */
-
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! HipstaPhotosCollectionViewCell
+        return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+        let header = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionHeader, withReuseIdentifier: "HeaderView", forIndexPath: indexPath) as! HipstaProfileHeaderCollectionReusableView
+        return header
+    }
+    
 }

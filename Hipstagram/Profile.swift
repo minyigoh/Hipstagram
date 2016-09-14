@@ -7,11 +7,20 @@
 //
 
 import UIKit
+import Firebase
 
 class Profile {
-    let username: String
+    var username = String()
+    var uid = String()
     
-    init(username: String) {
-        self.username = username
+    init?(snapshot: FIRDataSnapshot) {
+        guard let dict = snapshot.value as? [String: AnyObject] else { return nil }
+        uid = snapshot.key
+        
+        if let username = dict["username"] as? String {
+            self.username = username
+        } else {
+            username = ""
+        }
     }
 }

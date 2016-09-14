@@ -8,7 +8,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="v92-1i-rd9">
             <objects>
-                <viewController title="Sign Up View Controller" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="flipHorizontal" id="VJM-kq-Mc3" customClass="SignUpViewController" customModule="Hipstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpViewController" title="Sign Up View Controller" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="flipHorizontal" id="VJM-kq-Mc3" customClass="SignUpViewController" customModule="Hipstagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VyM-ar-AzI"/>
                         <viewControllerLayoutGuide type="bottom" id="Uch-GZ-fwx"/>
@@ -213,6 +213,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="yTo-7d-Csy"/>
+        <segue reference="R77-Q8-cBp"/>
     </inferredMetricsTieBreakers>
 </document>
