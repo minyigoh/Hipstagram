@@ -16,4 +16,3 @@ class DataService {
     static let databaseRef = FIRDatabase.database().reference()
     static let userRef = databaseRef.child("Hipsta Users")
 }
-

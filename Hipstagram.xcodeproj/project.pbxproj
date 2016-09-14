@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		48DB69F81D826F0800B689EC /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DB69F71D826F0800B689EC /* DataService.swift */; };
 		48E4404A1D8111A000874D92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E440491D8111A000874D92 /* AppDelegate.swift */; };
 		48E4404C1D8111A000874D92 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E4404B1D8111A000874D92 /* SignUpViewController.swift */; };
 		48E4404F1D8111A000874D92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48E4404D1D8111A000874D92 /* Main.storyboard */; };
@@ -22,17 +21,16 @@
 		48E4406A1D81140B00874D92 /* UploadImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E440691D81140B00874D92 /* UploadImageViewController.swift */; };
 		48E4406C1D8114F700874D92 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E4406B1D8114F700874D92 /* ProfileViewController.swift */; };
 		AE04D0231D8132F4002B151D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE04D0221D8132F4002B151D /* GoogleService-Info.plist */; };
-		AE0A1FC51D829EA1000C6CAF /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0A1FC41D829EA1000C6CAF /* DataService.swift */; };
 		AE0A1FC91D82A4BD000C6CAF /* Hipsta.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0A1FC81D82A4BD000C6CAF /* Hipsta.swift */; };
 		AE726C521D824B94009AEDC4 /* UncoveredContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE726C511D824B94009AEDC4 /* UncoveredContentViewController.swift */; };
 		AEB5914B1D87DE0A00C3366D /* ImagePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB5914A1D87DE0A00C3366D /* ImagePost.swift */; };
+		AEDE3FC91D88EF9A00A129C0 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDE3FC81D88EF9A00A129C0 /* DataService.swift */; };
 		AEEFF9601D87FDAC00030368 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEFF95F1D87FDAC00030368 /* Profile.swift */; };
 		B8131AA7DF803A8006C1BB20 /* Pods_Hipstagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C1D1E7CD744D311986DA5A /* Pods_Hipstagram.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		01CA4E0848DD0A1D3E989834 /* Pods-Hipstagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hipstagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hipstagram/Pods-Hipstagram.release.xcconfig"; sourceTree = "<group>"; };
-		48DB69F71D826F0800B689EC /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		48E440461D8111A000874D92 /* Hipstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hipstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48E440491D8111A000874D92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48E4404B1D8111A000874D92 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -50,10 +48,10 @@
 		48E4406B1D8114F700874D92 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		7A5DCECD9D01A2ECA7C7EFBA /* Pods-Hipstagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hipstagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hipstagram/Pods-Hipstagram.debug.xcconfig"; sourceTree = "<group>"; };
 		AE04D0221D8132F4002B151D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		AE0A1FC41D829EA1000C6CAF /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		AE0A1FC81D82A4BD000C6CAF /* Hipsta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hipsta.swift; sourceTree = "<group>"; };
 		AE726C511D824B94009AEDC4 /* UncoveredContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UncoveredContentViewController.swift; sourceTree = "<group>"; };
 		AEB5914A1D87DE0A00C3366D /* ImagePost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePost.swift; sourceTree = "<group>"; };
+		AEDE3FC81D88EF9A00A129C0 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		AEEFF95F1D87FDAC00030368 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		B9C1D1E7CD744D311986DA5A /* Pods_Hipstagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hipstagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -70,14 +68,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		48DB69F91D826F1200B689EC /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				48DB69F71D826F0800B689EC /* DataService.swift */,
-			);
-			name = Classes;
-			sourceTree = "<group>";
-		};
 		48E4403D1D8111A000874D92 = {
 			isa = PBXGroup;
 			children = (
@@ -173,8 +163,8 @@
 			children = (
 				AE0A1FC81D82A4BD000C6CAF /* Hipsta.swift */,
 				AEEFF95F1D87FDAC00030368 /* Profile.swift */,
-				AE0A1FC41D829EA1000C6CAF /* DataService.swift */,
 				AEB5914A1D87DE0A00C3366D /* ImagePost.swift */,
+				AEDE3FC81D88EF9A00A129C0 /* DataService.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -316,18 +306,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE0A1FC51D829EA1000C6CAF /* DataService.swift in Sources */,
 				48E4406C1D8114F700874D92 /* ProfileViewController.swift in Sources */,
 				AE726C521D824B94009AEDC4 /* UncoveredContentViewController.swift in Sources */,
 				48E4404C1D8111A000874D92 /* SignUpViewController.swift in Sources */,
 				48E4404A1D8111A000874D92 /* AppDelegate.swift in Sources */,
 				AEB5914B1D87DE0A00C3366D /* ImagePost.swift in Sources */,
+				AEDE3FC91D88EF9A00A129C0 /* DataService.swift in Sources */,
 				AE0A1FC91D82A4BD000C6CAF /* Hipsta.swift in Sources */,
 				48E4406A1D81140B00874D92 /* UploadImageViewController.swift in Sources */,
 				AEEFF9601D87FDAC00030368 /* Profile.swift in Sources */,
 				48E440681D8113F500874D92 /* ImageFeedViewController.swift in Sources */,
 				48E4405D1D81123000874D92 /* SignInViewController.swift in Sources */,
-				48DB69F81D826F0800B689EC /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
