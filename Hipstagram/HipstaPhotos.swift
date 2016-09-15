@@ -14,6 +14,7 @@ class hipstaPhotos: NSObject {
     var photoUrl: String
     var username: String
     var caption: String
+    var date: String
     var createdAt: Double
     
     
@@ -24,12 +25,14 @@ class hipstaPhotos: NSObject {
         
         uid = snapshot.key
         
+        
         if let dictPhoto = dict["photoUrl"] as? String{
             
             self.photoUrl = dictPhoto
         }else{
             self.photoUrl = ""
         }
+        
         
         if let dictUsername = dict["username"] as? String{
             
@@ -38,12 +41,22 @@ class hipstaPhotos: NSObject {
             self.username = ""
         }
         
+        
         if let dictCaption = dict["caption"] as? String{
             
             self.caption = dictCaption
         }else{
             self.caption = ""
         }
+        
+        
+        if let dictDate = dict["date"] as? String{
+            
+            self.date = dictDate
+        }else{
+            self.date = ""
+        }
+        
         
         if let createdAt = dict["createdAt"] as? Double{
             self.createdAt = createdAt

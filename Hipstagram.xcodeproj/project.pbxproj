@@ -23,7 +23,7 @@
 		AE04D0231D8132F4002B151D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE04D0221D8132F4002B151D /* GoogleService-Info.plist */; };
 		AE0A1FC91D82A4BD000C6CAF /* Hipsta.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0A1FC81D82A4BD000C6CAF /* Hipsta.swift */; };
 		AE726C521D824B94009AEDC4 /* UncoveredContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE726C511D824B94009AEDC4 /* UncoveredContentViewController.swift */; };
-		AEB5914B1D87DE0A00C3366D /* ImagePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB5914A1D87DE0A00C3366D /* ImagePost.swift */; };
+		AEB5914B1D87DE0A00C3366D /* HipstaPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB5914A1D87DE0A00C3366D /* HipstaPhotos.swift */; };
 		AEDE3FC91D88EF9A00A129C0 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDE3FC81D88EF9A00A129C0 /* DataService.swift */; };
 		AEEFF9601D87FDAC00030368 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEFF95F1D87FDAC00030368 /* Profile.swift */; };
 		B8131AA7DF803A8006C1BB20 /* Pods_Hipstagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C1D1E7CD744D311986DA5A /* Pods_Hipstagram.framework */; };
@@ -50,7 +50,7 @@
 		AE04D0221D8132F4002B151D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AE0A1FC81D82A4BD000C6CAF /* Hipsta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hipsta.swift; sourceTree = "<group>"; };
 		AE726C511D824B94009AEDC4 /* UncoveredContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UncoveredContentViewController.swift; sourceTree = "<group>"; };
-		AEB5914A1D87DE0A00C3366D /* ImagePost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePost.swift; sourceTree = "<group>"; };
+		AEB5914A1D87DE0A00C3366D /* HipstaPhotos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HipstaPhotos.swift; sourceTree = "<group>"; };
 		AEDE3FC81D88EF9A00A129C0 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		AEEFF95F1D87FDAC00030368 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		B9C1D1E7CD744D311986DA5A /* Pods_Hipstagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hipstagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,7 +163,7 @@
 			children = (
 				AE0A1FC81D82A4BD000C6CAF /* Hipsta.swift */,
 				AEEFF95F1D87FDAC00030368 /* Profile.swift */,
-				AEB5914A1D87DE0A00C3366D /* ImagePost.swift */,
+				AEB5914A1D87DE0A00C3366D /* HipstaPhotos.swift */,
 				AEDE3FC81D88EF9A00A129C0 /* DataService.swift */,
 			);
 			name = Classes;
@@ -310,7 +310,7 @@
 				AE726C521D824B94009AEDC4 /* UncoveredContentViewController.swift in Sources */,
 				48E4404C1D8111A000874D92 /* SignUpViewController.swift in Sources */,
 				48E4404A1D8111A000874D92 /* AppDelegate.swift in Sources */,
-				AEB5914B1D87DE0A00C3366D /* ImagePost.swift in Sources */,
+				AEB5914B1D87DE0A00C3366D /* HipstaPhotos.swift in Sources */,
 				AEDE3FC91D88EF9A00A129C0 /* DataService.swift in Sources */,
 				AE0A1FC91D82A4BD000C6CAF /* Hipsta.swift in Sources */,
 				48E4406A1D81140B00874D92 /* UploadImageViewController.swift in Sources */,

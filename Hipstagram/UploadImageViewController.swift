@@ -12,6 +12,8 @@ import Fusuma
 
 class UploadImageViewController: UIViewController, FusumaDelegate {
     
+    var listOfImagePosts = [hipstaPhotos] ()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let fusuma = FusumaViewController()
@@ -38,7 +40,62 @@ class UploadImageViewController: UIViewController, FusumaDelegate {
             } else {
                 // Metadata contains file metadata such as size, content-type, and download URL.
                 let downloadURL = metadata!.downloadURL()!.absoluteString
-                DataService.userRef.child(FIRAuth.auth()!.currentUser!.uid).child("hipstaPhotos").childByAutoId().updateChildValues(["photoURL": downloadURL])
+                let hipstaPhotoDict = [
+                    "photoURL": downloadURL,
+                    "userID": hipsta.currentHipstaUid
+                ]
+               
+                DataService.hipstaPhotosRef.childByAutoId().updateChildValues(hipstaPhotoDict) //generates uid for uploaded hipstaPhoto
+                
+                DataService.hipstaPhotosRef.observeSingleEventOfType(.Value, withBlock: { (hipstaPhotoSnapshot) in
+                    let photoKey = hipstaPhotoSnapshot.key
+                    let photoDict = [photoKey: "true"]
+                    DataService.userRef.child(hipsta.currentHipstaUid).child("uploaded Photos").updateChildValues(photoDict)
+                })
+
+                
+                
+//                FIRDatabase.database().reference().child("Hipsta Users").child(hipsta.currentHipstaUid).child("Hipsta Photos").observeEventType(.ChildAdded, withBlock: { (uploadedPhotoSnapshot) in
+//                    
+//                    let hipstaPhotoKey = uploadedPhotoSnapshot.key
+////                    let hipstaPhotoDict = [hipstaPhotoKey: "true"]
+//                    
+//                    
+//                    FIRDatabase.database().reference().child("Hipsta Photos").child(hipstaPhotoKey).observeSingleEventOfType(.Value, withBlock: { (photoSnapshot) in
+//                        if let hipstaPhoto = hipstaPhotos(snapshot: photoSnapshot){
+//                            
+//                        }
+//                    })
+//                    
+//                })
+                
+                
+                
+                
+              
+                
+                
+                /*
+                //writing hipstaPhotos into Firebase Database
+                let hipstaPhotosDict = [
+                    "photoUrl": downloadURL
+                    //            "username" : hipsta.currentHipstaUsername,
+                    "date" : NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle),
+                    "createdAt" : NSDate().timeIntervalSince1970,
+                    "userUID" : hipsta.currentHipstaUid
+                ]
+                
+                
+                let hipstaPhotosRef = DataService.databaseRef.child("hipstaPhotos").childByAutoId()
+                
+                hipstaPhotosRef.setValue(hipstaPhotosDict)
+             */
+                
+                /*
+                 change ["photoURL": downloadURL] to ([hipstaPhotosRef.key:true]) for the following -> UploadVC::
+                 DataService.userRef.child(FIRAuth.auth()!.currentUser!.uid).child("hipstaPhotos").childByAutoId().updateChildValues(["photoURL": downloadURL])
+                 */
+
             }
         })
         

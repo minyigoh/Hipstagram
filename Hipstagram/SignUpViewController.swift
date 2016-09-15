@@ -78,6 +78,8 @@ class SignUpViewController: UncoveredContentViewController,UITextFieldDelegate {
                 let hipstaDict = ["username" : username, "email" : email]
                 currentHipstaRef.setValue(hipstaDict)
                 
+                
+                
 //                let firebaseRef = FIRDatabase.database().reference()
 //                let currentUserRef = firebaseRef.child("Hipsta Users").child(hipsta.uid)
 //                let userDict = ["username" : username, "email" : email]

@@ -15,4 +15,6 @@ class DataService {
     static let testRef = imagesRef.child("")
     static let databaseRef = FIRDatabase.database().reference()
     static let userRef = databaseRef.child("Hipsta Users")
+    static let hipstaPhotosRef = databaseRef.child("Hipsta Photos")
 }
+
