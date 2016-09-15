@@ -14,6 +14,7 @@ class HipstasTableViewCell: UITableViewCell {
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var followButton: UIButton!
     
     
     @IBAction func onFollowButtonClicked(sender: UIButton) {
@@ -21,9 +22,19 @@ class HipstasTableViewCell: UITableViewCell {
         switch isFollowing {
         case false:
             sender.setTitle("Following", forState: .Normal)
+            sender.layer.borderWidth = 1.0
+            sender.layer.cornerRadius = 5.0
+            sender.layer.borderColor = UIColor.whiteColor().CGColor
+            sender.backgroundColor = UIColor.blackColor()
+            sender.tintColor = UIColor.whiteColor()
             isFollowing = true
         default:
             sender.setTitle("Follow", forState: .Normal)
+            sender.layer.borderWidth = 1.0
+            sender.layer.cornerRadius = 5.0
+            sender.layer.borderColor = UIColor.blackColor().CGColor
+            sender.backgroundColor = UIColor.whiteColor()
+            sender.tintColor = UIColor.blackColor()
             isFollowing = false
         }
     }

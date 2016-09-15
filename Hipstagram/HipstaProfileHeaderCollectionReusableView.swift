@@ -16,4 +16,5 @@ class HipstaProfileHeaderCollectionReusableView: UICollectionReusableView {
     @IBOutlet weak var followingCountLabel: UILabel!
     
     @IBOutlet weak var profileImageView: UIImageView!
+
 }

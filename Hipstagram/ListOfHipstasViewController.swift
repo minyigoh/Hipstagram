@@ -11,6 +11,7 @@ import UIKit
 class ListOfHipstasViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var listOfHipstas = [Profile]()
+    var destination = OtherProfileViewController()
     
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
@@ -39,7 +40,21 @@ class ListOfHipstasViewController: UIViewController, UITableViewDelegate, UITabl
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! HipstasTableViewCell
         let hipsta = listOfHipstas[indexPath.row]
         cell.usernameLabel.text = hipsta.username
+        cell.followButton.layer.borderWidth = 1.0
+        cell.followButton.layer.cornerRadius = 5.0
+        cell.followButton.backgroundColor = UIColor.whiteColor()
+        cell.followButton.tintColor = UIColor.blackColor()
+        cell.contentView.bringSubviewToFront(cell.followButton)
         return cell
     }
-
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let selectedHipsta = listOfHipstas[indexPath.row]
+        // Present profile view controller of the selected Hipsta
+        destination.hipstaUsername = selectedHipsta.username
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        destination = segue.destinationViewController as! OtherProfileViewController
+    }
 }
