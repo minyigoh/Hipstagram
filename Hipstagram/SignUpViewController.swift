@@ -71,6 +71,7 @@ class SignUpViewController: UncoveredContentViewController,UITextFieldDelegate {
             if let hipsta = user{
                 
                 NSUserDefaults.standardUserDefaults().setObject(hipsta.uid, forKey: "userUID")
+                NSUserDefaults.standardUserDefaults().setObject(username, forKey: "username")
                 
                 self.performSegueWithIdentifier("mainSegue", sender: nil)
                 

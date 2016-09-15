@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+
+		48A411CD1D8A98D600A6D1E6 /* OtherProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A411CC1D8A98D600A6D1E6 /* OtherProfileViewController.swift */; };
+		48B79C8D1D88EE9A0094F93E /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B79C8C1D88EE9A0094F93E /* DataService.swift */; };
+		48B79C931D892F940094F93E /* ListOfHipstasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B79C921D892F940094F93E /* ListOfHipstasViewController.swift */; };
+		48B79C951D8939320094F93E /* HipstasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B79C941D8939320094F93E /* HipstasTableViewCell.swift */; };
 		48E4404A1D8111A000874D92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E440491D8111A000874D92 /* AppDelegate.swift */; };
 		48E4404C1D8111A000874D92 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E4404B1D8111A000874D92 /* SignUpViewController.swift */; };
 		48E4404F1D8111A000874D92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48E4404D1D8111A000874D92 /* Main.storyboard */; };
@@ -20,6 +25,8 @@
 		48E440681D8113F500874D92 /* ImageFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E440671D8113F500874D92 /* ImageFeedViewController.swift */; };
 		48E4406A1D81140B00874D92 /* UploadImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E440691D81140B00874D92 /* UploadImageViewController.swift */; };
 		48E4406C1D8114F700874D92 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E4406B1D8114F700874D92 /* ProfileViewController.swift */; };
+		48F642511D89456500E73DFC /* HipstaPhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F642501D89456500E73DFC /* HipstaPhotosCollectionViewCell.swift */; };
+		48F642531D89458A00E73DFC /* HipstaProfileHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F642521D89458A00E73DFC /* HipstaProfileHeaderCollectionReusableView.swift */; };
 		AE04D0231D8132F4002B151D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE04D0221D8132F4002B151D /* GoogleService-Info.plist */; };
 		AE0A1FC91D82A4BD000C6CAF /* Hipsta.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0A1FC81D82A4BD000C6CAF /* Hipsta.swift */; };
 		AE726C521D824B94009AEDC4 /* UncoveredContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE726C511D824B94009AEDC4 /* UncoveredContentViewController.swift */; };
@@ -31,6 +38,10 @@
 
 /* Begin PBXFileReference section */
 		01CA4E0848DD0A1D3E989834 /* Pods-Hipstagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hipstagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hipstagram/Pods-Hipstagram.release.xcconfig"; sourceTree = "<group>"; };
+		48A411CC1D8A98D600A6D1E6 /* OtherProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherProfileViewController.swift; sourceTree = "<group>"; };
+		48B79C8C1D88EE9A0094F93E /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		48B79C921D892F940094F93E /* ListOfHipstasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListOfHipstasViewController.swift; sourceTree = "<group>"; };
+		48B79C941D8939320094F93E /* HipstasTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HipstasTableViewCell.swift; sourceTree = "<group>"; };
 		48E440461D8111A000874D92 /* Hipstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hipstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48E440491D8111A000874D92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48E4404B1D8111A000874D92 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +57,8 @@
 		48E440671D8113F500874D92 /* ImageFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFeedViewController.swift; sourceTree = "<group>"; };
 		48E440691D81140B00874D92 /* UploadImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadImageViewController.swift; sourceTree = "<group>"; };
 		48E4406B1D8114F700874D92 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		48F642501D89456500E73DFC /* HipstaPhotosCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HipstaPhotosCollectionViewCell.swift; sourceTree = "<group>"; };
+		48F642521D89458A00E73DFC /* HipstaProfileHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HipstaProfileHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		7A5DCECD9D01A2ECA7C7EFBA /* Pods-Hipstagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hipstagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hipstagram/Pods-Hipstagram.debug.xcconfig"; sourceTree = "<group>"; };
 		AE04D0221D8132F4002B151D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AE0A1FC81D82A4BD000C6CAF /* Hipsta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hipsta.swift; sourceTree = "<group>"; };
@@ -68,6 +81,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+
+		48A411CA1D8A332400A6D1E6 /* Profile VCs */ = {
+			isa = PBXGroup;
+			children = (
+				48E4406B1D8114F700874D92 /* ProfileViewController.swift */,
+				48B79C921D892F940094F93E /* ListOfHipstasViewController.swift */,
+				48A411CC1D8A98D600A6D1E6 /* OtherProfileViewController.swift */,
+			);
+			name = "Profile VCs";
+			sourceTree = "<group>";
+		};
+		48A411CB1D8A333300A6D1E6 /* Profile classes */ = {
+			isa = PBXGroup;
+			children = (
+				48F642501D89456500E73DFC /* HipstaPhotosCollectionViewCell.swift */,
+				48F642521D89458A00E73DFC /* HipstaProfileHeaderCollectionReusableView.swift */,
+				48B79C941D8939320094F93E /* HipstasTableViewCell.swift */,
+			);
+			name = "Profile classes";
+			sourceTree = "<group>";
+		};
 		48E4403D1D8111A000874D92 = {
 			isa = PBXGroup;
 			children = (
@@ -115,7 +149,7 @@
 				AE726C531D8252A5009AEDC4 /* Launch_Story VCs */,
 				48E440671D8113F500874D92 /* ImageFeedViewController.swift */,
 				48E440691D81140B00874D92 /* UploadImageViewController.swift */,
-				48E4406B1D8114F700874D92 /* ProfileViewController.swift */,
+				48A411CA1D8A332400A6D1E6 /* Profile VCs */,
 			);
 			name = "View controllers";
 			sourceTree = "<group>";
@@ -161,6 +195,7 @@
 		AEB591491D87ADAA00C3366D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				48A411CB1D8A333300A6D1E6 /* Profile classes */,
 				AE0A1FC81D82A4BD000C6CAF /* Hipsta.swift */,
 				AEEFF95F1D87FDAC00030368 /* Profile.swift */,
 				AEB5914A1D87DE0A00C3366D /* HipstaPhotos.swift */,
@@ -306,6 +341,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+
+				48F642511D89456500E73DFC /* HipstaPhotosCollectionViewCell.swift in Sources */,
+				48F642531D89458A00E73DFC /* HipstaProfileHeaderCollectionReusableView.swift in Sources */,
 				48E4406C1D8114F700874D92 /* ProfileViewController.swift in Sources */,
 				AE726C521D824B94009AEDC4 /* UncoveredContentViewController.swift in Sources */,
 				48E4404C1D8111A000874D92 /* SignUpViewController.swift in Sources */,
@@ -314,7 +352,10 @@
 				AEDE3FC91D88EF9A00A129C0 /* DataService.swift in Sources */,
 				AE0A1FC91D82A4BD000C6CAF /* Hipsta.swift in Sources */,
 				48E4406A1D81140B00874D92 /* UploadImageViewController.swift in Sources */,
+				48A411CD1D8A98D600A6D1E6 /* OtherProfileViewController.swift in Sources */,
+				48B79C931D892F940094F93E /* ListOfHipstasViewController.swift in Sources */,
 				AEEFF9601D87FDAC00030368 /* Profile.swift in Sources */,
+				48B79C951D8939320094F93E /* HipstasTableViewCell.swift in Sources */,
 				48E440681D8113F500874D92 /* ImageFeedViewController.swift in Sources */,
 				48E4405D1D81123000874D92 /* SignInViewController.swift in Sources */,
 			);

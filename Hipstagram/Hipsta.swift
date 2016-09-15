@@ -13,4 +13,8 @@ class hipsta: NSObject {
     static var currentHipstaUid: String {
         return NSUserDefaults.standardUserDefaults().objectForKey("userUID") as! String
     }
+    
+    static var currentHipstaUsername: String {
+        return NSUserDefaults.standardUserDefaults().objectForKey("username") as! String
+    }
 }

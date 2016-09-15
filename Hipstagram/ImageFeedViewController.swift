@@ -24,6 +24,7 @@ class ImageFeedViewController: UIViewController,UITableViewDelegate,UITableViewD
         self.imageFeedTableView.dataSource = self
     }
     
+    
     func RetrieveHipstaPhotos() {
         
         // read from firebase database
@@ -50,6 +51,7 @@ class ImageFeedViewController: UIViewController,UITableViewDelegate,UITableViewD
           }
         
     
+
 
 //     MARK: - Table View Data Source
     

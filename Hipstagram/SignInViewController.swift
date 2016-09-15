@@ -49,6 +49,13 @@ class SignInViewController: UncoveredContentViewController,UITextFieldDelegate {
                 
                 NSUserDefaults.standardUserDefaults().setObject(hipsta.uid, forKey: "userUID")
                 
+                DataService.userRef.child(FIRAuth.auth()!.currentUser!.uid).observeEventType(.Value, withBlock: { (snapshot) in
+                    let userDict = snapshot.value as! [String: AnyObject]
+                    let username = userDict["username"]
+                    
+                    NSUserDefaults.standardUserDefaults().setObject(username, forKey: "username")
+                })
+                
                 self.performSegueWithIdentifier("mainSegue", sender: nil)
                 
                 }else {
